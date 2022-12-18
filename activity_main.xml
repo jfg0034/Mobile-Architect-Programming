@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F81CB"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:gravity="center_vertical"
+        android:padding="5sp"
+        android:background="#1DA783"
+        android:textColor="#ffff"
+        android:text="Guest"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="#0F81CB"
+        android:textColor="#ffff"
+        android:text="InventoryApp"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_below="@id/greeting" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:layout_below="@id/title"
+        android:rowCount="2"
+        android:columnCount="2" >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:clickable="true"
+            android:onClick="onClickProfile"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorAccent"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <ImageView
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:src="@drawable/ic_person50" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PROFILE"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:clickable="true"
+            android:onClick="onClickInventory"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#1DA783"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <ImageView
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:src="@drawable/ic_inventory50" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INVENTORY"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:clickable="true"
+            android:onClick="onClickSearch"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#1DA783"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <ImageView
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:src="@drawable/ic_search50" />
+                <TextView
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:text="SEARCH"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:clickable="true"
+            android:onClick="onClickSettings"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorAccent"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <ImageView
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:src="@drawable/ic_settings50" />
+                <TextView
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:text="SETTINGS"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:textSize="25sp"
+        android:backgroundTint="#49A742"
+        android:onClick="onClickExit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10sp"/>
+
+    <Button
+        android:id="@+id/log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:textSize="25sp"
+        android:backgroundTint="#49A742"
+        android:onClick="onClickLogIn"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10sp"/>
+
+    <Button
+        android:id="@+id/log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:textSize="25sp"
+        android:backgroundTint="#49A742"
+        android:onClick="onClickLogOut"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10sp"/>
+
+</RelativeLayout>
