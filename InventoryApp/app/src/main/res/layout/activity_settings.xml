@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3E5F5"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:text="Settings"
+        android:textStyle="bold"
+        android:textColor="#ffff"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:textSize="35sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20sp">
+
+        <TextView
+            android:id="@+id/permissionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Notification by SMS"
+            android:textSize="20sp"
+            android:layout_marginTop="100sp" />
+
+        <Switch
+            android:id="@+id/permissionSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/permissionText"
+            android:layout_alignParentRight="true"
+            android:checked="false"/>
+
+        <TextView
+            android:id="@+id/darkMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Dark Mode"
+            android:textSize="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_below="@id/permissionText"
+            android:layout_alignParentLeft="true"/>
+
+        <Switch
+            android:id="@+id/darkModeSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/darkMode"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/fontSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Font Size"
+            android:textSize="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_below="@id/darkMode"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/spinner_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fontSize"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/theme_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Theme"
+            android:textSize="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_below="@id/fontSize"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/spinner_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/theme_change"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
